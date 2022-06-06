@@ -22,10 +22,7 @@ sports_directory['soccer'][0] = 'Andres'
 print(sports_directory)
 
 # # Change the value 20 in z to 30
-for i in z:
-    for j in i:
-        if i.get(j) == 20:
-            i.update({j: 30})
+z[0]['y'] = 30
 print(z)
 
 
@@ -83,15 +80,25 @@ dojo = {
     'instructors': ['Michael', 'Amy', 'Eduardo', 'Josh', 'Graham', 'Patrick', 'Minh', 'Devon']
 }
 
+# def printInfo(some_dict):
+#     for key, values in some_dict.items():
+#         count = len(some_dict[key])
+#         print(str(count) + " " + key.upper())
+#         if(isinstance(values, list)):
+#             for value in values:
+#                 print(value)
+#         else:
+#             print(value)
+
+# printInfo(dojo)
+
 def printInfo(some_dict):
     for key, values in some_dict.items():
         count = len(some_dict[key])
         print(str(count) + " " + key.upper())
-        if(isinstance(values, list)):
-            for value in values:
-                print(value)
-        else:
+        for value in values:
             print(value)
+
 
 printInfo(dojo)
 
